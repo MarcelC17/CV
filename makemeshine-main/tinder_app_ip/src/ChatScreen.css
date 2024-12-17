@@ -1,0 +1,108 @@
+.chatScreen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chatScreen__timestamp {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+
+.chatScreen__messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px; /* Ensure there's space for the input field */
+}
+
+.chatScreen__message,
+.chatScreen__messageUser {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chatScreen__message {
+    justify-content: flex-start; /* Align other person's messages to the left */
+}
+
+.chatScreen__messageUser {
+    justify-content: flex-end; /* Align current user's messages to the right */
+}
+
+.chatScreen__image {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chatScreen__text {
+    max-width: 60%;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatScreen__textRight {
+    background-color: #29b3cd;
+    color: white;
+    text-align: right;
+}
+
+.chatScreen__input {
+    display: flex;
+    justify-content: center; /* Centrare pe orizontală */
+    align-items: center; /* Centrare pe verticală */
+    padding: 10px ; /* Spațierea sus și jos */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9; /* Schimbare culoare de fundal */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatScreen__inputField {
+    flex: 1;
+    border-radius: 30px;
+    padding: 12px 20px; /* Mărirea puțin a padding-ului pentru a face câmpul mai vizibil */
+    border: 1px solid #ccc;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Mărire dimensiune font */
+}
+
+.chatScreen__inputButton {
+    border: none;
+    margin-right: 20px;
+    background-color: white;
+    font-weight: bold;
+    color: #6a0dad;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none; /* Remove default outline */
+    transition: box-shadow 0.3s ease; /* Add transition for smoother effect */
+    position: relative; /* Set position to relative to contain the pseudo-element */
+    z-index: 0; /* Set z-index to 1 to position the pseudo-element behind the button */
+   
+}
+
+.chatScreen__inputButton:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    background-color: #a35dd4; /* Adjust background color with opacity */
+    z-index: -1;
+
+}

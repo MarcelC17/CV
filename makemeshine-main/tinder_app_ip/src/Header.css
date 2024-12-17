@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #e0b3ff, #8d31de); /* Gradient from left to right */
+    padding: 10px;
+  }
+  
+  .header__icon {
+    padding: 10px;
+  }
+  
+  .header img {
+    height: 50px;
+    object-fit: contain;
+    margin-left: 20px;
+  }
+  
+  .dark-header {
+    background: linear-gradient(to right, #e0b3ff, #8d31de);
+  }
+  
+  .dark-icon {
+    color: #6a0dad;
+  }
+  

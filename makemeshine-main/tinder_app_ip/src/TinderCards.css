@@ -1,0 +1,136 @@
+.card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw; /* Adjust to match the container width */
+    max-width: 350px;
+    height: 400px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Ensure button is not visible outside the card */
+    position: relative; /* Ensure button is positioned relative to the card */
+}
+
+.card > h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+}
+
+.tinderCards__cardContainer {
+    position: relative;
+    width: 100%; /* Ensure the container spans the entire width */
+    height: 400px; /* Set a fixed height for the container */
+    display: flex;
+    justify-content: center;
+    margin-top: 7vh;
+    overflow: hidden; /* Hide overflow to prevent scrollbar */
+}
+
+.showDetailsButton,
+.undoButton {
+    position: absolute;
+    bottom: 10px; /* Adjust to desired position */
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+
+.showDetailsButton svg,
+.undoButton svg {
+    width: 24px;
+    height: 24px;
+    fill: black;
+}
+
+.showDetailsButton svg circle {
+    fill: white;
+}
+
+.showDetailsButton:hover svg circle {
+    fill: lightgrey;
+}
+
+.undoButton:hover svg path {
+    fill: black;
+}
+
+.showDetailsButton:hover svg path {
+    fill: black;
+}
+
+.undoButton:hover svg circle {
+    fill: lightgrey;
+}
+
+.cardContainer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 200px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust as needed */
+    
+}
+
+.cardContainer .details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-54%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: none;
+    width: 100vw; /* Ajustează pentru a se potrivi cu lățimea containerului */
+    max-width: 350px;
+    height: 400px;
+    display: flex; /* Folosește flexbox */
+    justify-content: center; /* Centrează orizontal conținutul */
+    align-items: left; /* Centrează vertical conținutul */
+    flex-direction: column; /* Stabilește direcția coloanelor pentru a adăuga un item pe fiecare linie */
+    padding: 20px; /* Adaugă spațiu în jurul conținutului */
+    font-size: 1.0em; /* Setează dimensiunea fontului */
+    margin-left: 20px; /* Mărește marginea stângă a textului */
+    color: #191a1b96
+}
+
+.cardContainer .details p{
+    margin-bottom: 15px; /* Adaugă o linie nouă după fiecare item */
+    margin-right: 8px; /* Mărește marginea dreaptă a textului */
+}
+
+.details-label {
+    font-weight: bold; /* Face textul "nume:" și "prenume:" bolduit */
+}
+
+.matchConfirmation {
+    position: fixed;
+    top: 20vh; /* Adjust the vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Add this at the end of your CSS file */
+.details {
+    transition: left 0.5s ease-in-out;
+}
+
+.details.show {
+    left: 50%; /* Final position when shown */
+}
+
+.details.hide {
+    left: 120%; /* Off-screen position when hidden */
+}

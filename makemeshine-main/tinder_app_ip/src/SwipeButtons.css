@@ -1,0 +1,44 @@
+.swipeButtons {
+    position: absolute; /* Poziționează absolut în container */
+    bottom: 10px; /* Ajustează valoarea pentru a muta butoanele mai sus */
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px; /* Păstrează padding pentru spațiere */
+}
+
+
+.swipeButtons .MuiIconButton-root {
+    background-color: #fff;
+    box-shadow: 0px 10px 50px -2px #6a0dad; /* Adaugă umbra butoanelor */
+    padding: 10px !important; /* Padding mai mic pentru butoanele mai mici */
+}
+
+.swipeButtons__repeat,
+.swipeButtons__left,
+.swipeButtons__star,
+.swipeButtons__right,
+.swipeButtons__lightning {
+    padding: 1.5vw !important; /* Smaller padding to reduce button size */
+}
+
+.swipeButtons__repeat {
+    color: #f5b748 !important;
+}
+
+.swipeButtons__left {
+    color: #ec5e6f !important;
+}
+
+.swipeButtons__star {
+    color: #62b4f9 !important;
+}
+
+.swipeButtons__right {
+    color: #76e2b3 !important;
+}
+
+.swipeButtons__lightning {
+    color: #915dd1 !important;
+}
+

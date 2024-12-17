@@ -1,0 +1,26 @@
+/* Additional CSS Styles */
+.chats {
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-card {
+    position: relative;
+    margin-bottom: 20px; /* Add margin to create space between chat components */
+}
+
+.chat-card img {
+    transition: transform 0.3s ease;
+    transform: scale(2.0) translateY(5%);
+}
+
+.chat-card:hover img {
+    transform: scale(1.6) translateY(0); /* Adjust the hover effect */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .chat-card {
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+}
